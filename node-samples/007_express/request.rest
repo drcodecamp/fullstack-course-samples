@@ -1,0 +1,23 @@
+POST http://localhost:3000/cats
+Content-Type: application/json
+
+{
+  "cats": [
+    {
+      "name": "lala",
+      "age": 3
+    },
+    {
+      "name": "boom-boom",
+      "age": 1
+    },
+    {
+      "name": "chiki",
+      "age": 2
+    },
+    {
+      "name": "cha cha",
+      "age": 2
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Keyboard Enter Event</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+            }
+            p {
+                margin: 0;
+            }
+            .move-able {
+                margin-top: 4em;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: #009dff;
+                transition: all 0.1s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="width">Window Width</p>
+        <div class="move-able"></div>
+        <p id="log">Keys:</p>
+    </body>
+    <script>
+        let currentPosition = 0
+        let stepSize = document.body.clientWidth / 10
+        document.querySelector('#width').innerHTML = `Window Width ${document.body.clientWidth }`
+        document.querySelector('.move-able').style.width = `${stepSize}px`
+        const log = document.getElementById('log')
+        document.addEventListener('keydown', logKey)
+        function logKey(e) {
+            if (e.code === 'Space') {
+                currentPosition += stepSize
+                if (currentPosition + (stepSize - 1) > document.body.clientWidth) return
+                document.querySelector('.move-able').innerHTML = `${currentPosition.toFixed(0)}`
+                document.querySelector('.move-able').style.transform = `translateX(${currentPosition}px)`
+            }
+            log.textContent += ` ${e.code}`
+        }
+    </script>
+</html>

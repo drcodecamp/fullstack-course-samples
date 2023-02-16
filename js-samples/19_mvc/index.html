@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Counter Application</title>
+    </head>
+    <link rel="stylesheet" href="src/css/main.css" />
+    <body onload="onDemoPageLoad()">
+    
+        <header>
+            <button onclick="onIncrement()">Increment</button>
+            <button onclick="onDecrement()">decrement</button>
+        </header>
+        
+        <main>
+            <div class="root">0</div>
+            <button onclick="onNextLevel()">Next Level</button>
+        </main>
+        
+        <script src="src/controller.js"></script>
+        <script src="src/model.js"></script>
+        <script src="src/view.js"></script>
+    </body>
+</html>

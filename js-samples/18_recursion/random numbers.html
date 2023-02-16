@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursion</title>
+</head>
+<body>
+<script>
+  const gameOfSeven = () => {
+    let iterations = 0
+    const randomNumber =  getRandomIntInclusive(0,10)
+    if(randomNumber !== 7){
+      iterations++
+      console.log('Random:',randomNumber)
+      gameOfSeven() // re run function
+    } else {
+      console.log('Random:',randomNumber)
+      console.log(`it took ${iterations} to find 7!`)
+    }
+  }
+  const getRandomIntInclusive = (min, max) =>{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  gameOfSeven()
+</script>
+</body>
+</html>

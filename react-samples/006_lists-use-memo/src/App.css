@@ -1,0 +1,75 @@
+body {
+  background: #222025;
+  color: #eeeeee;
+  font-family: Roboto, sans-serif;
+}
+.app-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.app-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: center;
+}
+.filter {
+  padding: 10px;
+  cursor: pointer;
+}
+.filter #option {
+  cursor: pointer;
+}
+
+.card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.card-price:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-image {
+  margin: 20px;
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 21px;
+  background: #333333;
+}
+
+.pokemon-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.1s linear;
+}
+
+.exercise-input {
+  padding: 10px;
+  margin: 10px;
+}

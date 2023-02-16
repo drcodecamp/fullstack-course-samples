@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flex vs block</title>
+    </head>
+    <style>
+        body {
+            background-color: #222025;
+        }
+        .flexbox {
+            margin-bottom: 10px;
+            color: white;
+            padding: 20px;
+            display: flex;
+            background-color: #383849;
+        }
+        .flexbox div {
+            background-color: #d32424;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .block {
+            color: white;
+            padding: 20px;
+            background-color: #383849;
+        }
+
+        .block div {
+            background-color: #d32424;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <div class="flexbox">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <div class="block">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>

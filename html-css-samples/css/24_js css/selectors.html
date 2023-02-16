@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS CSS Selectors</title>
+    <style>
+        /* Chat containers */
+        .container {
+            border: 2px solid #dedede;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .container::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .time-right {
+            float: right;
+            color: #aaa;
+        }
+
+        .time-left {
+            float: left;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>Hello. How are you today?</p>
+    <span class="time-right">11:00</span>
+</div>
+
+<div class="container" data-sent="user">
+    <p>Hey! I'm fine. Thanks for asking!</p>
+    <span class="time-left">11:01</span>
+</div>
+
+<div class="container">
+    <p>Sweet! So, what do you wanna do today?</p>
+    <span class="time-right">11:02</span>
+</div>
+
+<div class="container" data-sent="user">
+    <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+    <span class="time-left">11:05</span>
+</div>
+<script>
+    document.querySelectorAll(`[data-sent="user"]`).forEach(message =>{
+        message.style.backgroundColor = '#e6f7d2'
+    })
+</script>
+</body>
+</html>

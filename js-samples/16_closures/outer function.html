@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closures Outer function</title>
+</head>
+<body>
+<script>
+  function someOuterFunc(){
+    let luckyNumber = 1
+    function someInnerFunction() {
+      console.log(luckyNumber)
+      return luckyNumber
+    }
+    return someInnerFunction
+  }
+  let myLocalInstance = someOuterFunc() // here we save what return from someOuterFunc();
+  myLocalInstance(); // expected 1
+</script>
+</body>
+</html>

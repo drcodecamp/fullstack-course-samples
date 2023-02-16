@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pseudo :focus</title>
+        <style>
+            input {
+                padding: 2em;
+            }
+            input::placeholder {
+                color: green;
+                font-weight: bold;
+                font-size: 1.1em;
+            }
+            input:focus {
+                outline: none;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <label>
+                <input class="my-input" type="text" placeholder="some text" />
+            </label>
+        </div>
+    </body>
+</html>

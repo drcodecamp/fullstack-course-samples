@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            const today = new Date()
+            const hours = today.getHours()
+            const minutes = today.getMinutes()
+            const seconds = today.getSeconds()
+            console.log(`${hours}:${minutes}:${seconds}`)
+            console.log(today.toLocaleDateString('he-il')) // israel format
+            console.log(today.toLocaleDateString('es-ES')) // spain format
+            console.log(today.toLocaleDateString('en-US')) // us format
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template literals</title>
+</head>
+<body>
+<script>
+  let myAge = 33
+  let sentence = 'My age is: ' + myAge + ', im feeling so old!'
+  console.log(sentence)
+    // VS
+  let myAge2 = 33
+  let sentence2 = `My age is ${myAge2} im feeling so old!`
+  console.log(sentence2)
+  
+  // Long Paragraph
+  // no need to chain strings with + operator
+  let longP = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. " +
+    "Accusantium asperiores beatae consequuntur dolor dolores eum laudantium " +
+    "molestiae odit, qui quia voluptas" +
+    " voluptate."
+  
+  let longP2 = `Lorem ipsum dolor sit amet, consectetur adi
+  pisicing elit. At commodi molestiae nesc
+  iunt soluta tenetur! Autem consectetur hi
+  c nam nostrum unde. Commodi, provident qui
+  squam.`
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For-in</title>
+</head>
+<body>
+<script>
+  let user = {
+    age:33,
+    fullName:"doctor soussana",
+    location:"israel"
+  }
+  for (let key in user ){
+    console.log('The property with the name','#',key ,'has value of =>', user[key])
+  }
+  let favField = prompt('whats ur fav field?')
+  console.log('favField',user[favField])
+  if(user[favField]){
+    delete user[favField]
+  }
+  console.log(user)
+</script>
+</body>
+</html>

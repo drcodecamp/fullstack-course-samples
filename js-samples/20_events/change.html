@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Change</title>
+    </head>
+    <body>
+        <label>
+            <input id="old-fashion" type="text" oninput="updateTextField(this,event)" placeholder="function is bind directly" />
+        </label>
+        <label>
+            <input id="new-fashion" type="text" placeholder="Event listening" />
+        </label>
+        <script>
+            const updateTextField = (_, event) => {
+                console.log(event)
+                console.log('updating!', event.target.value)
+            }
+            const onInputChange = ({ target }) => {
+                console.log('updating!', target.value)
+            }
+            document.querySelector('#new-fashion').addEventListener('input', onInputChange)
+        </script>
+    </body>
+</html>

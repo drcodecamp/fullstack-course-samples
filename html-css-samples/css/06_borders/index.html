@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Borders</title>
+        <style>
+            body {
+                background: #3e3e3e;
+            }
+            .title{
+                font-size: 48px;
+                text-align: center;
+                color: white;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .doctor {
+                width: 250px;
+                height: 250px;
+                margin: 10px;
+                background-repeat: no-repeat;
+                background-image: url('gif.gif');
+                background-size: contain;
+            }
+
+            .solid {
+                border: 4px solid #00ff3c;
+            }
+            .dotted {
+                border: 4px dotted #ff6200;
+            }
+            .dash {
+                border: 4px dashed red;
+                border-radius: 20px;
+            }
+            button {
+                font-size: 23px;
+                border: none;
+                background: green;
+                width: 200px;
+                padding: 1em;
+                margin: 0.3em;
+                color: white;
+            }
+            .round {
+                border-radius: 50px;
+            }
+            .shaped {
+                border-radius: 0 80px 0 60px;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="title">Border</div>
+        <div class="container">
+            <div class="doctor solid"></div>
+            <div class="doctor dotted"></div>
+            <div class="doctor dash"></div>
+        </div>
+    <div class="title">Border Radius</div>
+        <div class="container">
+            <button>Button</button>
+            <button class="round">Button</button>
+            <button class="shaped">Button</button>
+        </div>
+    </body>
+</html>

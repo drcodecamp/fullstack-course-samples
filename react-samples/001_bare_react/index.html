@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <title>React App</title>
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    const LikeButtonComponent = () => {
+        const handleClick = () => {
+            alert('Liked!!')
+        }
+        return (
+            <button onClick={handleClick}>Like</button>
+        )
+    }
+    ReactDOM.render(
+        <h1>
+            <LikeButtonComponent />
+        </h1>,
+        document.getElementById('root'),
+    )
+</script>
+</body>
+</html>

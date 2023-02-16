@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            var yearsOfExp = prompt('how long do you play video games?')
+            var reward = calculateExp(yearsOfExp)
+            console.log('your reward is', reward)
+            function calculateExp(yearsOfExp) {
+                if (!yearsOfExp) return 'No Reward'
+                if (yearsOfExp <= 1) {
+                    return '👑'
+                } else if (yearsOfExp > 1 && yearsOfExp <= 5) {
+                    return '👑👑'
+                } else {
+                    return '👑👑👑👑👑'
+                }
+            }
+        </script>
+
+        <script>
+            logSum(2, 10)
+            function logSum(num1, num2) {
+                var sum = num1 + num2
+                console.log('Sum is', sum)
+            }
+        </script>
+    </body>
+</html>

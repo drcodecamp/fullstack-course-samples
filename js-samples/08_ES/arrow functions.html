@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Arrow functions</title>
+    </head>
+    <body>
+        <script>
+            function isYoung(userAge) {
+                if (userAge >= 18) {
+                    return 'Allowed'
+                } else return 'Banned'
+            }
+            
+            // SAME AS :
+            const isYoung2 = (userAge) => {
+                return userAge >= 18 ? 'Allowed' : 'Banned'
+            }
+            
+            // SAME AS :
+            const isYoung3 = (userAge) => userAge >= 18 ? 'Allowed' : 'Banned'
+            
+            //SAME AS :
+            const isYoung4 = userAge => userAge >= 18 ? 'Allowed' : 'Banned'
+            
+        </script>
+    </body>
+</html>

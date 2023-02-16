@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Margin</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+            }
+            .row {
+                display: flex;
+                margin: 50px;
+                text-align: center;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            all sides
+            <div style="width: 200px; height: 200px; background: #000">1</div>
+            <div style="width: 200px; height: 200px; background: #8a8a8a; margin: 20px">2</div>
+            <div style="width: 200px; height: 200px; background: #ababab">3</div>
+        </div>
+        <div class="row">
+            <div style="width: 200px; height: 200px; background: #000">1</div>
+            <div style="width: 200px; height: 200px; background: #8a8a8a; margin-left: 20px">2</div>
+            <div style="width: 200px; height: 200px; background: #ababab">3</div>
+        </div>
+
+        <div class="row">
+            <div style="width: 200px; height: 200px; background: #000">1</div>
+            <div style="width: 200px; height: 200px; background: #8a8a8a; margin-bottom: 20px">2</div>
+            <div style="width: 200px; height: 200px; background: #ababab">3</div>
+        </div>
+
+        <div class="row">
+            <div style="width: 200px; height: 200px; background: #000">1</div>
+            <div style="width: 200px; height: 200px; background: #8a8a8a; margin-right: 20px">2</div>
+            <div style="width: 200px; height: 200px; background: #ababab">3</div>
+        </div>
+
+        <div class="row">
+            <div style="width: 200px; height: 200px; background: #000">1</div>
+            <div style="width: 200px; height: 200px; background: #8a8a8a; margin-top: 20px">2</div>
+            <div style="width: 200px; height: 200px; background: #ababab">3</div>
+        </div>
+    </body>
+</html>

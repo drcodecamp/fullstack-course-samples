@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Attribute selector</title>
+        <style>
+            form input {
+                padding: 1em;
+            }
+            input[type='text'] {
+                all: unset;
+                width: 150px;
+                display: block;
+                margin-bottom: 10px;
+                background-color: #00b566;
+                padding: 1em;
+            }
+
+            input[type='button'] {
+                all: unset;
+                background-color: #00b566;
+                color: white;
+                width: 120px;
+                margin-left: 35px;
+                display: block;
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Styling Forms</h2>
+
+        <form name="input" action="" method="get">
+            Firstname:<label>
+                <input type="text" name="Name" value="Peter" size="20" />
+            </label>
+            Lastname:<label>
+                <input type="text" name="Name" value="Griffin" size="20" />
+            </label>
+            <input type="button" value="Example Button" />
+        </form>
+    </body>
+</html>

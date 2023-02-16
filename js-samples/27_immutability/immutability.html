@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Immutability</title>
+    </head>
+    <body>
+        <script>
+            let userList = ['userA', 'userB']
+
+            const addNewUser= (userList) => {
+                userList.push('userC')  // this will mutate the original array
+                return userList
+            }
+
+            const addNewUserB = (userList) => {
+                const mutatedUserList = [...userList]
+                mutatedUserList.push('userC')
+                return mutatedUserList // this will always return new array with new pointer
+            }
+            
+            const userListA = addNewUser(userList)
+            const userListB = addNewUserB(userList)
+
+            console.log('userListA === userList',userListA === userList) // expected true
+            console.log('userListB === userList',userListB === userList) // expected false
+            
+
+            let users = [{ name:'doctor',age:33},{ name:'liv',age:1},{ name:'liat',age:30}]
+            let clonedUsers = [...users]
+            console.log('users[0] === clonedUsers[0]',users[0] === clonedUsers[0])
+            clonedUsers[0].name = 'XXX'
+            console.log('clonedUsers[0].name',clonedUsers[0].name) // expected XXX
+            console.log('users[0].name',users[0].name) // expected XXX
+            
+            
+            const origin = {
+              name: 'doctor',
+              children:{
+                daniel: {
+                  nickname: 'Danny',
+                  age:20
+                },
+                liv:{
+                  nickname:'babe',
+                  age:3
+                }
+              }
+            }
+            
+            const cloneSpread = {...origin}
+            const clonedObj = structuredClone(origin)
+            const cloneWithJSON = JSON.parse(JSON.stringify(origin));
+
+            cloneSpread.children.daniel.age = 30
+            cloneWithJSON.children.daniel.age = 1
+            clonedObj.children.daniel.age = 0
+
+            console.log(origin.children.daniel)
+            console.log(cloneSpread.children.daniel)
+            console.log(clonedObj.children.daniel)
+            console.log(cloneWithJSON.children.daniel)
+            
+            
+        </script>
+    </body>
+</html>

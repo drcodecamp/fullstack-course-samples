@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closures</title>
+</head>
+<body>
+<script>
+  function generateRandomId(uniqueName){
+    let id = 1;
+    return function(){
+      id++;
+      let uniqueDate = Date.now()  + ' '
+      return id + uniqueName + uniqueDate.substring(uniqueDate.length/2,uniqueDate.length - 1)
+    }
+  }
+  const genA = generateRandomId('x')
+  const genB = generateRandomId('y')
+  
+  setTimeout(()=>{
+    console.log(genA())
+  },750)
+  
+  setTimeout(()=>{
+    console.log(genB())
+  },900)
+</script>
+</body>
+</html>

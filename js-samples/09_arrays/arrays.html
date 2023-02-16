@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+  <script>
+    /* Push new item */
+    const myArray = [10,20,'doctor',30]
+    myArray.push(10)
+    console.log('my new array is :',myArray)
+    
+    /* Remove item */
+    let myGames = ['Dota','PubG','BattleField 5']
+    myGames.splice(0,1)
+    console.log('My Games',myGames)
+    
+    /* Replace 2nd item */
+    let myScore = [50,60,70,80,90,100]
+    myScore.splice(1,1,45)
+    console.log('My Score',myScore)
+
+    /* Push in between */
+    let missiles = [50,60,70,80,90,100]
+    missiles.splice(2,0,99)
+    console.log('My missiles',missiles)
+
+    
+    /* Longest Name */
+    let myFamily = ['doctor','liat','liv','yehonathan']
+    let longestName = ''
+
+    for(let i = 0; i < myFamily.length ; i++){
+      if(myFamily[i].length > longestName.length){
+        longestName = myFamily[i]
+      }
+    }
+    console.log(longestName) // expected 'yehonathan'
+    
+    const data = 'my,name,is,dj,dota'
+    const dataArray = data.split(',')
+    console.log('is it array now?',dataArray)
+
+    const data2 = ['doctor','yosef','soussana']
+    const stringFromArray = data2.join(' ')
+    console.log('is it a string now?',stringFromArray)
+    
+  </script>
+</body>
+</html>

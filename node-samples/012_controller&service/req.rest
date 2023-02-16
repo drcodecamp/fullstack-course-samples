@@ -1,0 +1,14 @@
+POST http://localhost:9999/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "doctor",
+  "password": "123"
+}
+
+###
+
+GET  http://localhost:9999/api/products
+Content-Type: application/json
+
+###

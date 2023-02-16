@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Destructuring</title>
+    </head>
+    <body>
+        <script>
+            const user = {
+                name: 'doctor',
+                age: 33,
+                games: ['da', 'ha', 'pubG', 'dota2']
+            }
+            let { name, age } = user
+            console.log('"name", "age"',name, age)
+
+            name = 'x'
+            console.log('user.name = ',user.name) // expected 'doctor'
+            console.log('name',name) // expected 'x'
+            name = 123
+            console.log('name is now = ',name)
+            
+            const scores = [10,20,30,40]
+            const [firstScore,secondScore] = scores
+            // equals to
+            let firstItem = scores[0]
+            
+            console.log(firstScore,secondScore)
+            
+            const lastScore2 = scores[scores.length -1 ] // using the same value
+            const lastScore = [...scores].pop() // getting new value
+            
+            console.log('lastScore',lastScore)
+            console.log('lastScore2',lastScore2)
+        </script>
+    </body>
+</html>

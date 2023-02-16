@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback</title>
+</head>
+<body>
+<script>
+  function calcAge(currentYear,birthYear,callback){
+    let age = currentYear - birthYear
+    let result = 'Your age is: ' + age
+    callback(result)
+  }
+  function printMsg(value){
+    console.log(value)
+  }
+  function alertMsg(value){
+    alert(value)
+  }
+  calcAge(2022,1990,printMsg) // Expected "Your age is: 32"
+  calcAge(2022,1990,alertMsg) // Expected ALERT "Your age is: 32"
+</script>
+</body>
+</html>

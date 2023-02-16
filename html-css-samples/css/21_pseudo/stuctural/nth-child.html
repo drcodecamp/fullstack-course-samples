@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pseudo :nth-child(2n)</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            .container div {
+                padding: 20px;
+            }
+            .container :nth-child(even) {
+                background-color: #ffb1b1;
+            }
+
+            .container :nth-child(odd) {
+                background-color: #e3ff92;
+            }
+            .container :nth-child(2) {
+                background-color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+        </div>
+        <script>
+            /* using smart Pseudo selector  */
+            // document.querySelectorAll('.container :nth-child(1n)').forEach((element) => (element.innerHTML = 'Odd'))
+            // document.querySelectorAll('.container :nth-child(2n)').forEach((element) => (element.innerHTML = 'Even'))
+
+            /* using just javascript to determine which is odd and even  */
+            /* const elements = document.querySelectorAll('.container div')
+            elements.forEach((element, index) => {
+                if (index % 2 === 0) {
+                    element.innerHTML = 'Even'
+                } else {
+                    element.innerHTML = 'Odd'
+                }
+            })*/
+        </script>
+    </body>
+</html>

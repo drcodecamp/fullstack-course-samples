@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pure functions</title>
+    </head>
+    <body>
+        <script>
+        const addTwoNumbers = (a,b) => {
+          return a + b
+        }
+        
+        const addNumbers = (a,b) => {
+          const randomNum = Math.random() * 100
+          return a + b + randomNum
+        }
+
+        console.log(addTwoNumbers(1,5)) // the function return values are identical for identical arguments.
+        console.log(addNumbers(1,5)) // the function will return Inconsistent results with identical arguments.
+
+        let tax = 20
+        
+        const calculateTax = productPrice => {
+          return productPrice * tax / 100
+        }
+
+        const myScores = [100,100,90,58];
+
+        const updateMyScores = (newScores, array) => {
+          const clonedScores = [...array];
+          clonedScores.push(newScores)
+          return clonedScores;
+        }
+
+        const updatedScores = updateMyScores(100, myScores)
+        console.log('updatedScores',updatedScores)
+        console.log('are equal ?',updatedScores === myScores)
+        
+        </script>
+    </body>
+</html>

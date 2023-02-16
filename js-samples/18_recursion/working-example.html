@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Recursion</title>
+    </head>
+    <body>
+    <script>
+      let myAge = 0;
+      function recurse() {
+        if(myAge < 120){
+          console.log(myAge)
+          myAge++
+          recurse();
+        } else console.log(`My final age is ${myAge}`)
+      }
+      recurse();
+    </script>
+    </body>
+</html>

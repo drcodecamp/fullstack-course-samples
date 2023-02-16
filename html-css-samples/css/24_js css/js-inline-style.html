@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>js inline style</title>
+    </head>
+    <body>
+        <div id="football" class="red-team fast-team" style="transition: all 0.5s ease">Start</div>
+        <script>
+            let fontSize = 20
+            const element = document.querySelector('#football')
+            element.style.color = 'red'
+            const interval = setInterval(() => {
+                fontSize += 10
+                const updatedFontSize = fontSize
+                element.innerHTML = fontSize + 'px'
+                element.style.fontSize = updatedFontSize + 'px'
+                if (fontSize > 60) {
+                    element.innerHTML = 'Font is bigger than 60px!'
+                    clearInterval(interval)
+                }
+            }, 1000)
+        </script>
+    </body>
+</html>

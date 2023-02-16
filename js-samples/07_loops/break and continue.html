@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Break a Loop</title>
+    </head>
+    <body>
+        <script>
+            console.log('print Half way of:', 10)
+            printUntilBreak(10)
+            console.log('printAndExclude', 1)
+            printAndExclude(2, 4)
+            console.log('printAndExclude Ends..')
+
+            function printUntilBreak(num) {
+                var breakingPoint = num / 2
+                for (var i = 1; i < num; i++) {
+                    if (i > breakingPoint) {
+                        break
+                    } else console.log('number', i)
+                }
+            }
+
+            function printAndExclude(excludeNumber, until) {
+                for (var i = 1; i <= until; i++) {
+                    if (i === excludeNumber) {
+                        console.log('Skip')
+                        continue
+                    } else console.log('number', i)
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Z index</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Roboto, sans-serif;
+            }
+            .container {
+                color: white;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                background-color: #1b1d21;
+                height: 500px;
+                width: 100%;
+            }
+            .island {
+                z-index: 1;
+                bottom: -10px;
+                position: absolute;
+            }
+            .title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            .shovel {
+                transition: all 0.3s ease-in-out;
+                z-index: 0;
+                right: 50%;
+                bottom: 25px;
+                position: absolute;
+                transform-origin: bottom;
+            }
+            .shovel:hover {
+                cursor: pointer;
+                animation: rotate infinite 1s ease-in-out alternate;
+            }
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                25% {
+                    transform: rotate(25deg);
+                }
+                50% {
+                    transform: rotate(30deg);
+                }
+                80% {
+                    transform: rotate(-25deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Hover the shovel!</div>
+            <div class="shovel">
+                <img src="shovel.png" alt="none" />
+            </div>
+            <div class="island">
+                <img src="sand.png" alt="none" />
+            </div>
+        </div>
+    </body>
+</html>

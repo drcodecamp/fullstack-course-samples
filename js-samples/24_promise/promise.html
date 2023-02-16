@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Promise</title>
+    </head>
+    <body>
+        <script>
+            const myPromise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // reject(new Error('cant reach the server!'))
+                    const result = {x:10,y:9}
+                    resolve(result) // act like return and return the final value.
+                }, 2500)
+            })
+
+            myPromise
+                .then((promiseResponse) => {
+                    console.log('the promise was',promiseResponse)
+                })
+                .catch((error) => {
+                    console.log('there was error', error)
+                })
+                .finally(()=>{
+                  console.log('The promise has ended.')
+                })
+
+
+            const promise1 = Promise.resolve(3);
+            const promise2 = 42;
+            const promise3 = new Promise((resolve, reject) => {
+              setTimeout(resolve, 100, 'foo');
+            });
+
+            Promise.all([promise1, promise2, promise3]).then((values) => {
+              console.log(values);
+            });
+            // expected output: Array [3, 42, "foo"]
+
+
+            const promise4 = Promise.reject(0);
+            const promise5 = new Promise((resolve) => setTimeout(resolve, 100, 'quick'));
+            const promise6 = new Promise((resolve) => setTimeout(resolve, 500, 'slow'));
+
+            Promise.any([promise4, promise5, promise6]).then((value) => console.log(value));
+            // expected output: "quick", make sure that you also use catch so in real life senario
+            // maybe all of them will get rejected.
+            
+            
+        </script>
+    </body>
+</html>

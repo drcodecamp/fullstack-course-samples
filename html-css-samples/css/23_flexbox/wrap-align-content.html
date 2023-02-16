@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Flexbox- align content</title>
+        <style>
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 600px;
+                height: 600px;
+                background-color: gray;
+                align-content: center;
+            }
+            .container div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: orange;
+                height: 100px;
+                width: 100px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+            <div>item</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo :empty</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 90px;
+        }
+        .box:empty{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">has content</div>
+    <div class="box">has content</div>
+    <div class="box"></div>
+    <div class="box">has content</div>
+    <div class="box">has content</div>
+    <div class="box"></div>
+    <div class="box">has content</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Accent</title>
+        <style>
+            * {
+                accent-color: #21d4f1;
+            }
+            progress {
+                accent-color: #ff00a6;
+                place-self: center;
+                width: clamp(300px, 60%, 850px);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><b>Accent</b> Color</h1>
+        </header>
+
+        <label>
+            Checkbox
+            <input type="checkbox" checked />
+        </label>
+
+        <label>
+            Radio Buttons
+            <fieldset>
+                <input type="radio" name="accented-demo" checked />
+                <input type="radio" name="accented-demo" />
+                <input type="radio" name="accented-demo" />
+            </fieldset>
+        </label>
+        <label>
+            Range Slider
+            <input type="range" />
+        </label>
+        <label>
+            Progress element
+            <progress max="100" value="50">50%</progress>
+        </label>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+main {
+    height: 200vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+}
+
+section {
+    margin: 5px;
+    padding: 5px;
+}
+
+#s1 {
+    background-color: #eee;
+    width: 100px;
+    height: 100px;
+}
+
+#s2 {
+    background-color: #ddd;
+    width: 100pt;
+    height: 100pt;
+}
+
+#s3a {
+    background-color: #ccc;
+    width: 10em;
+    height: 10em;
+}
+
+#s3b {
+    background-color: #ccc;
+    font-size: 16pt;
+    width: 10em;
+    height: 10em;
+}
+
+#s4a {
+    background-color: #bbb;
+    width: 10rem;
+    height: 10rem;
+}
+
+#s4b {
+    background-color: #bbb;
+    font-size: 16pt;
+    width: 10rem;
+    height: 10rem;
+}
+
+#s5 {
+    background-color: #aaa;
+    color: #fff;
+    width: 10%;
+    height: 10%;
+}
+
+#s6 {
+    background-color: #999;
+    color: #fff;
+    width: 10vw;
+    height: 10vw;
+}
+
+#s7 {
+    background-color: #888;
+    color: #fff;
+    width: 10vh;
+    height: 10vh;
+}
+
+#s8 {
+    background-color: #777;
+    color: #fff;
+    width: 10vmin;
+    height: 10vmin;
+}
+
+#s9 {
+    background-color: #666;
+    color: #fff;
+    width: 10vmax;
+    height: 10vmax;
+}
+
+.unitpx {
+    font-size: 16px;
+}
+
+.unitpt {
+    font-size: 16pt;
+}
+
+.unitem {
+    font-size: 1.6em;
+}
+
+.unitrem {
+    font-size: 1.6rem;
+}
+
+.unit100 {
+    font-size: 100%;
+}
+
+.unitvw {
+    font-size: 1.6vw;
+}
+
+.unitvh {
+    font-size: 1.6vh;
+}
+
+.unitvmin {
+    font-size: 1.6vmin;
+}
+
+.unitvmax {
+    font-size: 1.6vmax;
+}

@@ -1,0 +1,13 @@
+.Basic {
+  display: flex;
+  flex-direction: column;
+  background-color: #676767;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Basic-text {
+  color: white;
+  font-size: 3em;
+}

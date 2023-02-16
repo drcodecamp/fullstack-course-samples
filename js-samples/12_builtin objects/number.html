@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+    <script>
+        let x = 1990
+        console.log(x.toString())
+        console.log(x.toLocaleString())
+        
+        const y = 1.2444231657441
+        const y2 = 1.2544231657441
+        
+        console.log(x.toFixed(2)) // expected 1990.00
+        console.log(y.toFixed(2)) // expected 1.24
+        console.log(y2.toFixed(2)) // expected 1.25 notice the round up ^
+        
+        const myAge = "29"
+        console.log(Number(myAge)) // expected 29 with a Number Object Wrapper
+        
+        const dogsSentence1 = "20 dogs went out yesterday."
+        const dogsSentence2 = "dogs are cool, i have 3 dogs!"
+        console.log(parseInt(dogsSentence1)) // expected 20.
+        console.log(parseInt(dogsSentence2)) // expected NaN.
+    </script>
+</body>
+</html>

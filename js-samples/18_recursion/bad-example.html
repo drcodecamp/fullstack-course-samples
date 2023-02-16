@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Recursion</title>
+    </head>
+    <body>
+        <script>
+            let myAge = 0
+            function recurse() {
+                myAge++
+                recurse()
+            }
+            recurse() //Uncaught RangeError: Maximum call stack size exceeded
+        </script>
+    </body>
+</html>

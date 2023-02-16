@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Spread and Rest</title>
+    </head>
+    <body>
+        <script>
+            console.log('Rest......')
+            sum(-300, 100, 50, 50, 100) // expected 0
+            console.log('Spread.......')
+            const unknownArrayOfNumbers = [2, 3, 1, 23, 5, 3, 34, 6, 86, 4]
+            sum(...unknownArrayOfNumbers)
+
+            function sum(first,...args) {
+                console.log('Got', args.length, 'arguments!')
+                let sum = 0
+                for (let i = 0; i < args.length; i++) {
+                    console.log('argument:', args[i])
+                    sum = sum + args[i]
+                }
+                sum = sum + first
+                console.log('Total sum is', sum)
+            }
+            
+            /** Using spread to create new array */
+            const myCloneArray = [...unknownArrayOfNumbers]
+            
+            const userOne = {
+              name:'doctor',
+              location:'tel aviv'
+            }
+            const userTwo = {
+              ...userOne,
+              name:'liv',
+            }
+        </script>
+    </body>
+</html>

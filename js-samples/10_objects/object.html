@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            /* Multi variables to hold car specs */
+            let carName = 'fiat'
+            let carBody = 'sedan'
+            let carWheels = 4
+            let carColor = 'blue'
+            let carWeight = 850
+
+            /* One variable to hold car */
+            const car = {
+                carName: 'fiat',
+                carBody: 'sedan',
+                carWheels: 4,
+                carColor: 'blue',
+                carWeight: 850,
+                getCarWeight2() {
+                  return this.carWeight
+                },
+                getCarWeight: function(){
+                  return this.carWeight
+                },
+            }
+            car.age = 32
+            delete car.carWheels
+            console.log('end result are', car)
+            
+            console.log('getCarWeight2', car.getCarWeight2())
+            console.log('getCarWeight', car.getCarWeight())
+
+            if (car.carWeight > 800) {
+                alert('Wow this is a car or a truck?!')
+            }
+        </script>
+    </body>
+</html>

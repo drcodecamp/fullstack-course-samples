@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Add event listener</title>
+        <style>
+            body {
+                height: 100vh;
+                margin: 0;
+            }
+            .move-able {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: #009dff;
+                transition: all 0.2s linear;
+            }
+            .bullet {
+                position: absolute;
+                height: 100px;
+                width: 10px;
+                background-color: orange;
+                transition: all 0.2s linear;
+            }
+            .crosshair {
+                position: absolute;
+                background-color: red;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                transition: all 0.1s linear;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="move-able"></div>
+        <div class="bullet"></div>
+        <div class="crosshair" draggable="true"></div>
+        <script>
+            let degree = 0
+            window.addEventListener('resize', () => {
+                degree +=2
+                document.querySelector('.move-able').style.transform = `rotate(${degree}deg)`
+            })
+            window.addEventListener('click', (e) => {
+                const xPos = e.offsetX
+                const yPos = e.offsetY
+                document.querySelector('.move-able').style.transform = `translateX(${xPos - 50}px)`
+                document.querySelector('.bullet').style.transform = `translateY(${yPos - 50}px)`
+                document.querySelector('.crosshair').style.transform = `translate(${xPos - 5}px,${yPos - 5}px)`
+            })
+        </script>
+    </body>
+</html>

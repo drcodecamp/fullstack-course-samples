@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Async</title>
+    </head>
+    <body>
+        <div id="demo"></div>
+        <script async>
+  
+          /** Waiting for a promise to resolve then use the value to calculate the result **/
+          const getMagicNumber = () => {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(100)
+                    }, 2000)
+                })
+            }
+
+            const calcNumbersAsync = async (myNumber) => {
+                const magicNumber = await getMagicNumber()
+                if (magicNumber) {
+                    console.log(magicNumber * myNumber)
+                }
+            }
+            calcNumbersAsync(10)
+
+            /** Waiting for a promise to resolve then render demo element **/
+            async function myDisplay() {
+                let myPromise = new Promise((resolve, reject) => {
+                    resolve('I love You !!')
+                })
+              const demoElementText = await myPromise
+                document.getElementById('demo').innerHTML = demoElementText.toString()
+            }
+            myDisplay()
+            
+        </script>
+    </body>
+</html>

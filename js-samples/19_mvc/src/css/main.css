@@ -1,0 +1,37 @@
+body{
+    margin:0;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+    font-size: 20px;
+}
+header{
+    background-color: #0a0a0a;
+    color: white;
+    width: 100%;
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    all: unset;
+    padding: 1em;
+    background-color: #0bc36b;
+    margin: .2em;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #41ea98;
+}
+
+.root{
+    display: flex;
+    font-size: 3em;
+    justify-content: center;
+}

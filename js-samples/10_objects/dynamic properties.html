@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic assign</title>
+</head>
+<body>
+<script>
+  /* Multi variables to hold car specs */
+  let carName = 'fiat'
+  let carBody = 'sedan'
+  let carWheels = 4
+  let carColor = 'blue'
+  let carWeight = 850
+  
+  /* One variable to hold car */
+  const addMe = 999
+  
+  const car = {
+    carName,
+    carBody,
+    carWheels,
+    carColor,
+    carWeight,
+    carExtra: addMe
+  }
+  
+  carName = 'X'
+
+  console.log('car.carExtra',car.carExtra)
+  console.log('car.carName',car.carName)
+  console.log('carName',carName)
+
+</script>
+</body>
+</html>

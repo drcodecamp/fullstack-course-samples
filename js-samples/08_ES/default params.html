@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Default params</title>
+    </head>
+    <body>
+        <script>
+            greetUser('doctor') // expected 'hello MR. doctor'
+            greetUser() // expected 'hello MR. Robot'
+
+            function greetUser(userName = 'Robot') {
+                console.log('hello MR.', userName)
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+{
+  "info": {
+    "_postman_id": "32aa0b1d-02b0-4d30-9a02-bffd970e24dc",
+    "name": "Garage",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7977707"
+  },
+  "item": [
+    {
+      "name": "orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9999/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "order status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9999/order?id=0-305019440",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "order"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "0-305019440"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"car\": {\r\n\"id\":305019440,\r\n\"damage\":235,\r\n\"carName\":\"mercedez\",\r\n\"carType\":\"sport\"\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9999/order",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9999",
+          "path": [
+            "order"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

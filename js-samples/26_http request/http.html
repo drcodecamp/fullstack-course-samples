@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let pokemon = null
+    const initApp = async () => {
+      try{
+        const pokemonData = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+        const pokemonItem = await pokemonData.json()
+        if(pokemonItem){
+          pokemon = pokemonItem
+          console.log('pokemon is',pokemon)
+        }
+      } catch (err){
+        console.log('Error fetching',err)
+      }
+    }
+    console.log('pokemon is',pokemon)
+    initApp()
+</script>
+</body>
+</html>

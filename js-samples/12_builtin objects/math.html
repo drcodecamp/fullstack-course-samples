@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const randomNum = Math.random()
+        console.log('Random the number',randomNum.toFixed(2))
+        const isDriving = randomNum > 0.5
+        console.log('is driving now?',isDriving) // refresh for different results
+        
+        const floatNumber = -2.37
+        console.log(Math.abs(floatNumber)) // expected + 2.37
+        console.log(Math.round(floatNumber)) // expected -2
+        
+        const calcPow = (x,y) => Math.pow(x,y)
+        console.log(calcPow(2,8)) // expected 256
+        console.log(calcPow(8,2)) // expected 64
+
+        // good way to find the min lower number
+        const arr = [0,2,3,20,100,-199,-3]
+        console.log(Math.min(...arr)) // expected -199
+        console.log(Math.max(...arr)) // expected 100
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "129c250c-c8fe-4c77-b33e-9c03d087b4fd",
+		"name": "DogCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7977707"
+	},
+	"item": [
+		{
+			"name": "getDogById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/v1/dog/63000ab58420e62a08d0a3d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"dog",
+						"63000ab58420e62a08d0a3d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/v1/dogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createDog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dog\":{\r\n        \"name\":\"ringo\",\r\n        \"age\": 3,\r\n        \"type\":\"poodle\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1000/api/v1/dog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"dog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDogById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1000/api/v1/dog/63000ab58420e62a08d0a3d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"dog",
+						"63000ab58420e62a08d0a3d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDogById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dog\":{\r\n        \"name\":\"day2\",\r\n        \"age\": 3,\r\n        \"type\":\"amstaf\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1000/api/v1/dog/63000d5968e53d5de4b2f422",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"api",
+						"v1",
+						"dog",
+						"63000d5968e53d5de4b2f422"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

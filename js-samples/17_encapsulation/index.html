@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encapsulation</title>
+</head>
+<body>
+
+<script>
+ const personModel = () => {
+   let fName = ''
+   const setFirstName = (value) => {
+     fName = value
+   }
+   const getFirstName = () => fName
+   return {
+     setFirstName,
+     getFirstName
+   }
+ }
+
+ const userA = personModel()
+ const userB = personModel()
+ 
+ userA.setFirstName('doctor')
+ userB.setFirstName('Liat')
+
+ console.log('userA =>',userA.getFirstName())
+ console.log('userB => ',userB.getFirstName())
+ 
+ console.log('what about acces fName?',fName) // Uncaught ReferenceError: fName is not defined
+ console.log('ok just log userA.fName no?',userA.fName) // undefined;
+</script>
+</body>
+</html>

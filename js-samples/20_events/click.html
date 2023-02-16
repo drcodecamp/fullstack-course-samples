@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Click event</title>
+    </head>
+    <body>
+        <div>
+            <div id="name">No name click here to edit</div>
+        </div>
+        <script>
+            const nameEl = document.querySelector('#name')
+            nameEl.addEventListener('click', (item) => {
+                if (item.target.innerHTML === 'no more') return
+                nameEl.innerHTML = prompt('whats ur name?')
+            })
+        </script>
+    </body>
+</html>

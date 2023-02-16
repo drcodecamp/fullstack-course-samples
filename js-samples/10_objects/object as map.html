@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object as map</title>
+</head>
+<body>
+<script>
+  let myFavColors = {
+    red: 10,
+    orange:5,
+    blue:1
+  }
+  let userSelectedColor = prompt('Please enter your favorite color')
+  
+  if(userSelectedColor) {
+    if(myFavColors[userSelectedColor]){
+      myFavColors[userSelectedColor] = myFavColors[userSelectedColor] + 1
+    } else myFavColors[userSelectedColor] = 1
+  }
+  
+  for(let color in myFavColors){
+    console.log('Color',color,"has been selected", myFavColors[color], "times.")
+  }
+  console.log(myFavColors)
+</script>
+</body>
+</html>

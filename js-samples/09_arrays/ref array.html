@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ref Arrays</title>
+</head>
+<body>
+<script>
+  const myArray = [10,20,30] // in memory 0x122ff4f
+  const myArray2 = [10,20,30]// in memory 0x112f92f
+  console.log('Are they equal?',myArray === myArray2) // expected FALSE~!
+  // ref 0x122ff4f  is not ref 0x112f92f.
+  
+  const myScores = [20,30,0,20,1,23]
+  const equalClone = myScores
+  const myNewScores = myScores.slice()
+  const myNewScores2 = Array.from(myScores)
+  console.log('myNewScores',myNewScores)
+  console.log('myNewScores2',myNewScores2)
+  
+  equalClone[0] = 'X'
+  console.log(myScores[0]) // expected X because equalClone points on myScores
+  
+</script>
+</body>
+</html>

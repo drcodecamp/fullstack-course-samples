@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Compare operators</title>
+    </head>
+    <body>
+        <script>
+            var myAge = 30
+            var mySisterAge = 12
+            var myAge3 = '30'
+            var isDriving = true
+            var isSleeping = false
+            console.log('myAge and myAge3', myAge3 === myAge) // expected false
+            console.log('myAge and myAge3', myAge3 == myAge) // expected true
+            console.log('am i adult ?', myAge > 18)
+            console.log('is my sister older than me?', mySisterAge > myAge)
+            console.log('do i sleep and drive?', isDriving && isSleeping)
+            console.log('do i sleep OR drive?', isDriving || isSleeping)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Factory function</title>
+</head>
+<body>
+ <script>
+     const Person = (name,age) => {
+       if (!name || age < 18){
+         throw new Error('You must be 18 to create a person obj.')
+       }
+       let person = {}
+       person.name = name
+       person.age = age
+       
+       person.info = () => {
+         console.log(`Hello my name is ${name} and im ${age} years old.`)
+       }
+       return person
+     }
+
+     const userA = Person('doctor',18)
+     userA.info()
+     const createUser = ({ userName, avatar }) => ({
+       userName,
+       avatar,
+       setUserName (userName) {
+         this.userName = userName;
+         return this;
+       }
+     });
+     
+     const userB = createUser({ userName: 'echo', avatar: 'echo.png' })
+ </script>
+</body>
+</html>

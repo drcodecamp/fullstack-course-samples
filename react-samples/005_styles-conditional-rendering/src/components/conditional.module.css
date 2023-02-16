@@ -1,0 +1,14 @@
+.success {
+  color: #1ec77b;
+}
+
+.normal {
+  color: white;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

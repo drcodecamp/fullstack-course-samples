@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>anonymous functions</title>
+</head>
+<body>
+ <script>
+   let step = 0
+   setInterval(function(){
+     step += 3
+     console.log('Hii there after '+ step +'s.')
+   },3000)
+   
+   const saveTheAnonymous = function(){
+     // This scope is belong to the arrow function which is anonymous function.
+   }
+   
+   const saveTheAnonymous2 = () => {
+     // This scope is belong to the arrow function which is anonymous function.
+   }
+   
+   
+ </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <title>React App</title>
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+    const Name = ({ value }) => {
+        return (
+            <div>My name is {value}.</div>
+        )
+    }
+    const Header = () => {
+        return (
+            <h1>
+                My CVS
+            </h1>
+        )
+    }
+    const Age = ({value}) => {
+        return (
+            <p>
+               And im {value} years old.
+            </p>
+        )
+    }
+    const Languages = ({value}) => {
+        return (
+            <p>
+                i like to learn how to write {value}!
+            </p>
+        )
+    }
+    ReactDOM.render(
+        <div>
+            <Header />
+            <Name value="dany" />
+            <Age value={32} />
+            <Languages value="react" />
+        </div>,
+        document.getElementById('root'),
+    )
+</script>
+</body>
+</html>

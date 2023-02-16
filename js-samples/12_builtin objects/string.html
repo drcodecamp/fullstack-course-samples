@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Strings</title>
+    </head>
+    <body>
+        <script>
+            const sentence = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore molestias optio voluptates.'
+            console.log(sentence.charAt(0)) // expected "L"
+            console.log(sentence.includes('ipsum')) // expected true
+            console.log(sentence.includes('ipSum')) // expected false
+            console.log(sentence.indexOf('con')) // expected 28 "con" start at character 28 => consectetur.
+
+            const sentence2 = 'i like food, food is the best!'
+            console.log(sentence2.replace('food', 'video games')) //  expected "i like video games, food is the best!"
+            console.log(sentence2.replaceAll('food', 'video games')) //  expected "i like video games, video games is the best!"
+
+            const myCrown = '👑'
+            const randomNum = Math.floor(Math.random() * 100)
+            console.log(myCrown.repeat(randomNum)) // refresh to see results
+
+            const bestSong = 'sugar pie honey bunch'
+            console.log(bestSong.substring(0, bestSong.length / 2)) // get the first half of the sentence.
+
+            const bestSinger = 'Sia            '
+            console.log(bestSinger.trim()) // expected 'Sia'
+            console.log(bestSinger.toLowerCase()) // expected 'sia'
+            console.log(bestSinger.toUpperCase()) // expected 'SIA'
+        </script>
+    </body>
+</html>
