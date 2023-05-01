@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Visibility</title>
+    <style>
+      body {
+        background: #3e3e3e;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .doctor {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        background-repeat: no-repeat;
+        background-image: url('gif.gif');
+        background-size: contain;
+      }
+      button {
+        font-size: 23px;
+        border: none;
+        background: green;
+        width: 200px;
+        padding: 1em;
+        margin: 0.3em;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="doctor" style="opacity: 1"></div>
+      <div class="doctor" style="opacity: 0"></div>
+      <div class="doctor" style="opacity: 1"></div>
+    </div>
+    <div class="container">
+      <div class="doctor" style="opacity: 1"></div>
+      <div class="doctor" style="visibility: hidden"></div>
+      <div class="doctor" style="opacity: 1"></div>
+    </div>
+    <div class="container">
+      <div class="doctor"></div>
+      <div class="doctor" style="display: none"></div>
+      <div class="doctor"></div>
+    </div>
+  </body>
+</html>

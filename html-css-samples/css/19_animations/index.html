@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Animation</title>
+    <style>
+      body {
+        margin: 0;
+        background: #1b1d21;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 750px;
+        margin-top: 20px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        margin: 4px;
+        background-color: #2c282e;
+        width: 800px;
+        height: 70px;
+        border-radius: 100px;
+        z-index: -1;
+      }
+      .text {
+        z-index: 0;
+        padding-left: 20px;
+        color: #a6a6a6;
+        width: 200px;
+        font-size: 20px;
+        position: absolute;
+      }
+
+      .ball {
+        z-index: 1;
+        height: 50%;
+        width: 70px;
+        border-radius: 100px;
+        background-color: gray;
+      }
+
+      .linear {
+        animation-timing-function: ease-in-out;
+        animation: ball-animation linear 2s alternate infinite;
+      }
+
+      .ease-in {
+        animation: ball-animation ease-in 2s alternate infinite;
+      }
+
+      .ease-out {
+        animation: ball-animation ease-out 2s alternate infinite;
+      }
+
+      .ease-in-out {
+        animation: ball-animation ease-in-out 2s alternate infinite;
+      }
+
+      .blue {
+        background-color: #33b1ff;
+      }
+      .red {
+        background-color: #00b566;
+      }
+      .green {
+        background-color: #ffa000;
+      }
+      .magenta {
+        background-color: #9c33e0;
+      }
+
+      @keyframes ball-animation {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(728px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="text">linear</div>
+        <div class="ball linear blue"></div>
+      </div>
+
+      <div class="row">
+        <div class="text">ease-out</div>
+        <div class="ball ease-in red"></div>
+      </div>
+
+      <div class="row">
+        <div class="text flipped">ease-in</div>
+        <div class="ball ease-out green"></div>
+      </div>
+
+      <div class="row">
+        <div class="text">ease-in-out</div>
+        <div class="ball ease-in-out magenta"></div>
+      </div>
+    </div>
+  </body>
+</html>

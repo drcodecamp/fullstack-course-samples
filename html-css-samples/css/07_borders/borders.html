@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Borders</title>
+    <style>
+      body {
+        margin: 0;
+        background: #3e3e3e;
+      }
+      .title {
+        font-size: 48px;
+        text-align: center;
+        color: white;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #322c2c;
+      }
+      .doctor {
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('gif.gif');
+      }
+      button {
+        font-size: 23px;
+        border: none;
+        background: green;
+        width: 200px;
+        padding: 1em;
+        margin: 0.3em;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Border</div>
+    <div class="container">
+      <div class="doctor" style="border: 4px solid white; border-radius: 0"></div>
+      <div class="doctor" style="border: 5px dotted #e7dac4; border-radius: 80px"></div>
+      <div class="doctor" style="border: 5px dashed greenyellow; border-radius: 100%"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Width and Height</title>
+    <style>
+      body {
+        margin: 0;
+        font-size: 24px;
+      }
+      .small-box {
+        display: inline-block;
+        height: 100px;
+        background-color: green;
+      }
+      .medium-box {
+        height: 200px;
+        width: 200px;
+        background-color: orange;
+      }
+      .large-box {
+        height: 300px;
+        width: 300px;
+        background-color: tomato;
+      }
+      .parent {
+        width: 200px;
+        height: 200px;
+        background-color: greenyellow;
+      }
+      .child {
+        height: 90px;
+        width: 100%;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="small-box">small box</div>
+      <div class="medium-box">medium box</div>
+      <div class="large-box">large box</div>
+      <div class="parent">
+        parent is 200px
+        <div class="child">child is 900px</div>
+      </div>
+    </main>
+  </body>
+</html>

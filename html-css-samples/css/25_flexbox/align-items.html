@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox- align items</title>
+    <style>
+      body {
+        font-family: monospace;
+        box-sizing: border-box;
+        margin: 0;
+        background-color: #222025;
+      }
+      .row div:nth-child(1) {
+        background-color: #00b566;
+        width: 80px;
+      }
+      .row div:nth-child(2) {
+        background-color: #dea211;
+        width: 120px;
+        height: 50px;
+      }
+      .row div:nth-child(3) {
+        width: 80px;
+        height: 125px;
+        background-color: #009dff;
+      }
+      .row div:nth-child(4) {
+        width: 200px;
+        height: 100px;
+        background-color: #e0305f;
+      }
+      .row div {
+        color: white;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        margin: 10px;
+        background-color: #00b566;
+      }
+      .row {
+        height: 400px;
+        display: flex;
+        background-color: #403c46;
+        margin: 10px;
+      }
+      main {
+        margin: 0 auto;
+        max-width: 1024px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="row" style="align-items: baseline">
+        <div>1</div>
+        <div style="align-self: center">2</div>
+        <div>3</div>
+        <div style="align-self: flex-end">4</div>
+      </div>
+    </main>
+  </body>
+</html>

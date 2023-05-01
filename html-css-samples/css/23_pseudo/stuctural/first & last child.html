@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pseudo :first-child</title>
+    <style>
+      body {
+        margin: 0;
+        background: #1b1d21;
+      }
+      .heroes {
+        display: flex;
+        width: 100%;
+        height: 800px;
+        background: #1b1d21;
+      }
+      .hero-item {
+        margin: 0.2em;
+        background-color: #494949;
+        width: 100px;
+        height: 100px;
+      }
+      .hero-item:first-child {
+        border: 2px solid red;
+      }
+      .hero-item:last-child {
+        border: 2px solid #006fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heroes">
+      <div class="hero-item">hero</div>
+      <div class="hero-item">hero</div>
+      <div class="hero-item">hero</div>
+      <div class="hero-item">hero</div>
+      <div class="hero-item">hero</div>
+      <div class="hero-item">hero</div>
+    </div>
+  </body>
+</html>

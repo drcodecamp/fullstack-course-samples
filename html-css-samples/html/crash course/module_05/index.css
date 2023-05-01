@@ -1,0 +1,21 @@
+html {
+    font-family: Assistant, sans-serif;
+    font-size: 20px;
+}
+
+em {
+    color: #f4b52a;
+}
+
+span {
+    color: cornflowerblue;
+}
+
+figure {
+    max-width: 200px;
+    text-align: center;
+    border-radius: 35px;
+}
+figcaption{
+    background: gainsboro;
+}

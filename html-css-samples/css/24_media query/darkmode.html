@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      * {
+        font-size: 22px;
+      }
+      :root {
+        --bg-color: white;
+        --text-color: black;
+      }
+      body {
+        background-color: var(--bg-color);
+      }
+      p {
+        color: var(--text-color);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: black;
+          --text-color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur harum quos?
+    </p>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid Autofill Autofit</title>
+    <style>
+      body {
+        background-color: #21272d;
+        color: #000000;
+      }
+      .grid {
+        display: grid;
+        padding: 3em;
+        gap: 2em;
+      }
+      .fit {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+      .fill {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      .quote {
+        padding: 2em;
+        border-radius: 0.3em;
+        background: #ffba2d;
+      }
+      .b {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid fill">
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+    </div>
+
+    <div class="grid fit">
+      <div class="quote b">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote b">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote b">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+      <div class="quote b">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, suscipit.
+      </div>
+    </div>
+  </body>
+</html>

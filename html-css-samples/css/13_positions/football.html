@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        background-color: green;
+      }
+      .gate {
+        background: center / contain no-repeat url('gates.png');
+        width: 756px;
+        height: 380px;
+        position: relative;
+        left: 200px;
+      }
+      .gatekeeper {
+        height: 200px;
+        background: url('gatekeeper.png');
+        background-size: contain;
+        width: 128px;
+        left: 300px;
+        top: 200px;
+      }
+      .ball {
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gate">
+      <div class="gatekeeper">
+        <img class="ball" src="soccer-ball.png" width="48" alt="ball" />
+      </div>
+    </div>
+  </body>
+</html>

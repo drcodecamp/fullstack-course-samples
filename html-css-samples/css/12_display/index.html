@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        background-color: #2a2828;
+        font-family: Assistant, sans-serif;
+        color: white;
+        text-align: center;
+      }
+      h1 {
+        font-size: 64px;
+      }
+      button {
+        all: unset;
+        background-color: rgba(58, 105, 147, 0.7);
+        padding: 2em;
+        width: 150px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgba(58, 105, 147, 1);
+      }
+      #modal {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 1em;
+        height: 500px;
+        width: 400px;
+        background-color: black;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Doctor code website</h1>
+    <button onclick="toggleModal()">Register</button>
+    <div id="modal" class="hide">
+      <h2>Fill in your Email</h2>
+      <p>
+        <label>
+          <input type="email" />
+        </label>
+      </p>
+      <button onclick="toggleModal()">Send</button>
+    </div>
+    <script>
+      function toggleModal() {
+        document.querySelector('#modal').classList.toggle('hide')
+      }
+    </script>
+  </body>
+</html>

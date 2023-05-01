@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Borders</title>
+    <style>
+      body {
+        background: #222025;
+      }
+
+      .title {
+        font-size: 42px;
+        text-align: center;
+        color: white;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      button {
+        font-size: 23px;
+        background: green;
+        border: none;
+        width: 200px;
+        height: 80px;
+        margin: 10px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Border</div>
+    <div class="title">Border Radius</div>
+    <div class="container">
+      <button>Button</button>
+      <button style="border-radius: 100%">Button</button>
+      <button style="border-radius: 50% 20% 0 0 / 100% 0% 0 0">Button</button>
+    </div>
+  </body>
+</html>

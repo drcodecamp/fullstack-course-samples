@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon Cart</title>
+  <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <h1>Pokemon POP Cart</h1>
+    <h2>Continue Purchase your favourite Pops</h2>
+    <nav>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./store.html">Store</a></li>
+        <li><a href="./cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+  <hr/>
+  <main>
+    <article>
+      <h2>Choose your pokemon</h2>
+      <p>Please fill in some data about yourself before deliver</p>
+      <form>
+        <p>Your Pokemon selection</p>
+        <p>
+          <label for="mew-two"
+          >Mew Two
+            <input
+                id="mew-two"
+                name="pokemon"
+                required
+                type="radio"
+                value="mew-two"
+            />
+          </label>
+        </p>
+        <p>
+          <label for="mew"
+          >Mew
+            <input id="mew" name="pokemon" required type="radio"
+                   value="mew"
+            /></label>
+        </p>
+        <p>
+          <label for="pikachu"
+          >pikachu
+            <input
+                id="pikachu"
+                name="pokemon"
+                required
+                type="radio"
+                value="pikachu"
+            /></label>
+        </p>
+
+        <p>
+          <label for="quantity">Quantity</label>
+          <input id="quantity" max="3" min="1" type="number"
+                 value="1"/>
+        </p>
+
+        <p>
+          <label for="pop-color">Pop Color</label>
+          <input id="pop-color" type="color"/>
+        </p>
+
+        <br/>
+        <fieldset>
+          <legend>Deliver to</legend>
+          <p>
+            <label for="name">Your Name:</label>
+            <input id="name" placeholder="Your Name" required
+                   type="text"/>
+          </p>
+          <p>
+            <label for="password">Your Password:</label>
+            <input
+                id="password"
+                placeholder="Your Password"
+                required
+                type="password"
+            />
+          </p>
+          <p>
+            <label for="address">Your Address:</label>
+            <input
+                id="address"
+                placeholder="Your Address"
+                required
+                type="text"
+            />
+          </p>
+        </fieldset>
+        <br/>
+        <button type="submit">Buy</button>
+      </form>
+      <br/>
+    </article>
+  </main>
+</body>
+</html>
+
+
+
+
+<p class=”pokemon-list”> Pokemons</p>

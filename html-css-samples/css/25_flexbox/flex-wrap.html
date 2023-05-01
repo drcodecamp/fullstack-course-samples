@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox - flex wrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      body {
+        margin-top: 50px;
+        font-family: monospace;
+        box-sizing: border-box;
+        background-color: #222025;
+      }
+      .flex-container {
+        display: flex;
+        margin: 0 auto;
+        background-color: #535383;
+        height: 900px;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-content: inherit;
+      }
+      .flex-container div {
+        flex-shrink: 0;
+        color: white;
+        font-size: 22px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: green;
+        width: 120px;
+        height: 120px;
+      }
+      @keyframes add-wrap {
+        from {
+          flex-wrap: unset;
+        }
+        to {
+          flex-wrap: wrap;
+        }
+      }
+      @keyframes scale {
+        from {
+          width: 1024px;
+        }
+        to {
+          width: 500px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div>item</div>
+      <div>item</div>
+      <div>item</div>
+      <div>item</div>
+      <div>item</div>
+      <div>item</div>
+    </div>
+  </body>
+</html>
