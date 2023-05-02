@@ -64,7 +64,7 @@ button {
   justify-content: center;
   padding-top: 33px;
   animation-delay: 1s;
-  transform: rotate(111deg);
+  transform: rotate(180deg);
 }
 .ball {
   top: 20px;

@@ -1,43 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Title</title>
   <style>
-    .cards {
+    .cards{
       width: 200px;
       height: 300px;
       position: relative;
-      transition: transform 0.6s;
+      transition: transform 0.5s;
       transform-style: preserve-3d;
     }
     .cards:hover{
       transform: rotateY(180deg);
     }
     .front-card,
-    .back-card {
+    .back-card{
       position: absolute;
       height: 100%;
       left: 0;
       backface-visibility: hidden;
     }
-    .back-card {
+    .back-card{
       transform: rotateY(180deg);
     }
   </style>
-  <title></title>
 </head>
 <body>
-  <div class="cards">
-      <img
-        class="front-card"
-        src="front-card.webp"
-        alt="Avatar"
-      />
-      <img
-        class="back-card"
-        src="back-card.webp"
-        alt="Avatar"
-      />
-  </div>
+ <div class="cards">
+   <img class="front-card" src="front-card.webp" alt="Avatar"/>
+   <img class="back-card" src="back-card.webp" alt="Avatar"/>
+ </div>
 </body>
 </html>
