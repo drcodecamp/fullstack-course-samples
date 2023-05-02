@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      margin: 0;
+      background-color: #232323;
+    }
+    .container{
+      position: relative;
+      left: 125px;
+      top: 125px;
+      transform-style: preserve-3d;
+    }
+    .shop{
+      position: relative;
+      z-index: 1;
+    }
+    .red-car{
+      position: absolute;
+      left: 270px;
+      bottom: 254px;
+      z-index: 2;
+      animation: red-car 2.5s linear infinite forwards;
+    }
+    .yellow-car{
+      position: absolute;
+      left: 170px;
+      bottom: 200px;
+      z-index: 3;
+      animation: yellow-car 2.7s linear infinite forwards;
+    }
+    @keyframes yellow-car {
+      from {
+        left: 37px;
+        bottom: 268px;
+      }
+      to {
+        left: 359px;
+        bottom: 83px;
+      }
+    }
+    @keyframes red-car {
+      from {
+        left: 475px;
+        bottom: 147px;
+      }
+      to {
+        left: 174px;
+        bottom: 322px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="shop" src="shop.png" width="1113" alt="shop">
+    <img src="yellow-car.png" class="yellow-car" width="234"
+         alt="yellow car">
+    <img class="red-car" src="red-car.png" alt="red-car" width="234">
+  </div>
+</body>
+</html>
