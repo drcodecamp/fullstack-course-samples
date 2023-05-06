@@ -35,17 +35,20 @@
   <body>
     <div class="container">
       <div class="doctor" style="opacity: 1"></div>
-      <div class="doctor" style="opacity: 0"></div>
+      <div onclick="alert('hello')" class="doctor"
+           style="opacity: 0"></div>
       <div class="doctor" style="opacity: 1"></div>
     </div>
     <div class="container">
-      <div class="doctor" style="opacity: 1"></div>
-      <div class="doctor" style="visibility: hidden"></div>
-      <div class="doctor" style="opacity: 1"></div>
+      <div class="doctor" style="visibility: visible"></div>
+      <div onclick="alert('hello')" class="doctor"
+           style="visibility: hidden"></div>
+      <div class="doctor" style="visibility: visible"></div>
     </div>
     <div class="container">
       <div class="doctor"></div>
-      <div class="doctor" style="display: none"></div>
+      <div onclick="alert('hello')" class="doctor"
+           style="display: none"></div>
       <div class="doctor"></div>
     </div>
   </body>
