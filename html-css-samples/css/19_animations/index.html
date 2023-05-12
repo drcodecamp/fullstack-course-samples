@@ -42,10 +42,13 @@
       }
 
       .linear {
-        animation-timing-function: ease-in-out;
         animation: ball-animation linear 2s alternate infinite;
       }
-
+      
+      .ease {
+        animation: ball-animation ease 2s alternate infinite;
+      }
+      
       .ease-in {
         animation: ball-animation ease-in 2s alternate infinite;
       }
@@ -87,14 +90,19 @@
         <div class="text">linear</div>
         <div class="ball linear blue"></div>
       </div>
+      
+      <div class="row">
+        <div class="text">ease</div>
+        <div class="ball ease "></div>
+      </div>
 
       <div class="row">
-        <div class="text">ease-out</div>
+        <div class="text">ease-in</div>
         <div class="ball ease-in red"></div>
       </div>
 
       <div class="row">
-        <div class="text flipped">ease-in</div>
+        <div class="text flipped">ease-out</div>
         <div class="ball ease-out green"></div>
       </div>
 
