@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <title>Title</title>
     <style>
+      @keyframes wobble {
+        from{
+          transform: translate3d(0,0,0);
+        }
+        15%{
+          transform: translate3d(-25%,0,0);
+        }
+        30%{
+          transform: translate3d(20%,0,0);
+        }
+        45%{
+          transform: translate3d(-15%,0,0);
+        }
+        60%{
+          transform: translate3d(10%,0,0);
+        }
+        75%{
+          transform: translate3d(-5%,0,0);
+        }
+        to{
+          transform: translate3d(0,0,0);
+        }
+      }
       div {
         display: flex;
         flex-direction: row;
@@ -12,6 +35,12 @@
         height: 100vh;
       }
       .wobble {
+        font-size: 4em;
+        cursor: pointer;
+      }
+      .wobble:hover{
+        animation: wobble 1s;
+        color: #0bc36b;
       }
     </style>
   </head>
