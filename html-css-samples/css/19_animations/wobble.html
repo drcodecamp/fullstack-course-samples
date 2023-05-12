@@ -1,53 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
-    @keyframes wobble {
-      from {
-        transform: translate3d(0, 0, 0);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
       }
-      15% {
-        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+      .wobble {
       }
-      30% {
-        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-      }
-      
-      45% {
-        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-      }
-      
-      60% {
-        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-      }
-      
-      75% {
-        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-      }
-      to {
-        transform: translate3d(0, 0, 0);
-      }
-    }
-    
-    .wobble {
-      font-size: 4em;
-      cursor: pointer;
-    }
-    .wobble:hover{
-      animation: wobble 1s;
-      color: #2faf0f;
-    }
-    .wobble:hover::before{
-      content: "😵‍💫";
-    }
-  </style>
-</head>
-<body>
-  <div
-    style="display: flex;flex-direction: row;align-items: center;justify-content: center;height: 100vh">
-    <p class="wobble">woobbblee</p>
-  </div>
-</body>
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="wobble">Woobbblee</p>
+    </div>
+  </body>
 </html>
