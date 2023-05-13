@@ -6,6 +6,8 @@
   <style>
     body {
       display: flex;
+      height: 50vh;
+      align-items: center;
       background-color: green;
     }
     .gate {
@@ -23,47 +25,35 @@
       left: 200px;
       top: 200px;
       position: relative;
+      z-index: 2;
     }
-    
-    .ball-curved{
+    .ball{
+      z-index: 1;
+      transform: rotate(0deg);
       left: 0;
       bottom: -400px;
       position: absolute;
       animation:
-        x-linear .5s alternate linear,
-        y-linear .5s alternate linear
+      x 1s alternate forwards,
+      y 1s forwards;
     }
-    
-    @keyframes x-linear {
-      to {
-        left: 400px;
-      }
-    }
-    @keyframes y-linear {
-      to {
-        bottom: 50px;
-      }
-    }
-    
-    .ball {
+    .ball-smooth {
       left: 0;
       bottom: -400px;
       position: absolute;
-      animation:x .5s alternate cubic-bezier(0.24, 0.19, 0.76, 0.69)
-      forwards,
-      y .5s cubic-bezier(0.39, 0.58, 0.57, 1) forwards;
+      animation:
+        x 1s cubic-bezier(1, -5.5, 1, 2) forwards,
+        y 1s ease-out forwards;
     }
     @keyframes x {
-      80%{
-        left: 250px;
-      }
       to {
-        left: 400px;
+        left: -180px;
       }
     }
     @keyframes y {
       to {
-        bottom: 50px;
+        bottom: 45px;
+        transform: rotate(-360deg);
       }
     }
   </style>
@@ -71,12 +61,12 @@
 <body>
   <div class="gate">
     <div class="gatekeeper">
-      <img class="ball" src="soccer-ball.png" width="48" alt="ball" />
+      <img class="ball-smooth" src="soccer-ball.png" width="48" alt="ball" />
     </div>
   </div>
   <div class="gate" style="margin-left: 100px">
     <div class="gatekeeper">
-      <img class="ball-curved" src="soccer-ball.png" width="48" alt="ball" />
+      <img class="ball" src="soccer-ball.png" width="48" alt="ball" />
     </div>
   </div>
 </body>
