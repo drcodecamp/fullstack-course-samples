@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Title</title>
-  <style>
-    body {
-      display: flex;
-      height: 50vh;
-      align-items: center;
-      background-color: green;
-    }
-    .gate {
-      background: center / contain no-repeat url('gates.png');
-      width: 756px;
-      height: 380px;
-      position: relative;
-      left: 200px;
-    }
-    .gatekeeper {
-      height: 200px;
-      background: url('gatekeeper.png');
-      background-size: contain;
-      width: 128px;
-      left: 200px;
-      top: 200px;
-      position: relative;
-      z-index: 2;
-    }
-    .ball{
-      z-index: 1;
-      transform: rotate(0deg);
-      left: 0;
-      bottom: -400px;
-      position: absolute;
-      animation:
-      x 1s alternate forwards,
-      y 1s forwards;
-    }
-    .ball-smooth {
-      left: 0;
-      bottom: -400px;
-      position: absolute;
-      animation:
-        x 1s cubic-bezier(1, -5.5, 1, 2) forwards,
-        y 1s ease-out forwards;
-    }
-    @keyframes x {
-      to {
-        left: -180px;
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        display: flex;
+        height: 50vh;
+        align-items: center;
+        background-color: green;
       }
-    }
-    @keyframes y {
-      to {
-        bottom: 45px;
-        transform: rotate(-360deg);
+      .gate {
+        background: center / contain no-repeat url('gates.png');
+        width: 756px;
+        height: 380px;
+        position: relative;
+        left: 200px;
       }
-    }
-  </style>
-</head>
-<body>
-  <div class="gate">
-    <div class="gatekeeper">
-      <img class="ball-smooth" src="soccer-ball.png" width="48" alt="ball" />
+      .gatekeeper {
+        height: 200px;
+        background: url('gatekeeper.png');
+        background-size: contain;
+        width: 128px;
+        left: 200px;
+        top: 200px;
+        position: relative;
+        z-index: 2;
+      }
+      .ball {
+        z-index: 1;
+        transform: rotate(0deg);
+        left: 0;
+        bottom: -400px;
+        position: absolute;
+        animation: x 1s forwards infinite, y 1s forwards infinite;
+      }
+      .ball-smooth {
+        left: 0;
+        bottom: -400px;
+        position: absolute;
+        animation: x 1s cubic-bezier(1, -5.5, 1, 2) forwards infinite,
+          y 1s ease-out forwards infinite;
+      }
+      @keyframes x {
+        to {
+          left: -180px;
+        }
+      }
+      @keyframes y {
+        to {
+          bottom: 45px;
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gate">
+      <div class="gatekeeper">
+        <img class="ball-smooth" src="soccer-ball.png" width="48" alt="ball" />
+      </div>
     </div>
-  </div>
-  <div class="gate" style="margin-left: 100px">
-    <div class="gatekeeper">
-      <img class="ball" src="soccer-ball.png" width="48" alt="ball" />
+    <div class="gate" style="margin-left: 100px">
+      <div class="gatekeeper">
+        <img class="ball" src="soccer-ball.png" width="48" alt="ball" />
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <style>
-    body{
-      background-color: #1b1d21;
-    }
-    .box{
-      height: 300px;
-      width: 300px;
-      background-color: pink;
-    }
-    .no-animation{
-      height: 300px;
-      width: 300px;
-      background-color: #2a94f3;
-    }
-  </style>
-</head>
-<body>
-  <div class="box"></div>
-  <div class="no-animation"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      @keyframes color-cycle {
+        0% {
+          background-color: #0bc36b;
+        }
+        50% {
+          background-color: orange;
+        }
+        100% {
+          background-color: magenta;
+        }
+      }
+      body {
+        background-color: #1b1d21;
+      }
+      .box {
+        height: 300px;
+        width: 300px;
+        background-color: pink;
+        animation: color-cycle 5s forwards;
+      }
+      .no-animation {
+        height: 300px;
+        width: 300px;
+        background-color: #2a94f3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="no-animation"></div>
+  </body>
 </html>
