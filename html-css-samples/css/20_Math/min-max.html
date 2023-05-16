@@ -18,48 +18,22 @@
         align-items: center;
         flex-direction: column;
       }
-      h1 {
-        font-size: clamp(40px, 6vw, 80px);
-      }
-      p {
-        font-size: clamp(25px, 2vw, 28px);
-      }
-      .item {
-        max-width: 1024px;
-        margin-top: 1em;
-        display: flex;
-        background-color: #2a94f3;
-        border: 1px solid #e6e6e6;
+      img {
+        border: 1px dashed white;
       }
       .img-a {
-        width: max(50%, 200px);
-        object-fit: cover;
+        width: max(25vw, 300px); /* width: 25vw; min-width: 300px; */
       }
       .img-b {
-        width: min(50%, 250px);
-        object-fit: cover;
+        width: min(25vw, 300px); /* width: 25vw; max-width: 300px; */
       }
     </style>
   </head>
   <body>
     <h1>Doctor Code Clamp This Text Out Of Life!</h1>
     <main>
-      <div class="item">
-        <img class="img-a" src="gif.gif" alt="doctor" />
-        <p>
-          The best moves for Bulbasaur are Vine Whip and Power Whip when attacking Pokémon in Gyms.
-          This move combination has the highest total DPS and is also the best moveset for PVP
-          battles.
-        </p>
-      </div>
-      <div class="item">
-        <img class="img-b" src="gif.gif" alt="doctor" />
-        <p>
-          The best moves for Bulbasaur are Vine Whip and Power Whip when attacking Pokémon in Gyms.
-          This move combination has the highest total DPS and is also the best moveset for PVP
-          battles.
-        </p>
-      </div>
+      <img class="img-a" src="gif.gif" alt="doctor" />
+      <img class="img-b" src="gif.gif" alt="doctor" />
     </main>
   </body>
 </html>
