@@ -29,22 +29,23 @@
         animation: slide 0.5s linear infinite;
         display: block;
       }
+      .example::after {
+        content: 'תלחץ עליי';
+      }
+      .example:hover::after {
+        content: 'תעזוב';
+      }
       .example {
+        font-weight: bolder;
         text-align: center;
         cursor: pointer;
         overflow: hidden;
         position: relative;
         padding: 20px;
         font-size: 22px;
-        color: white;
+        color: #000000;
         width: 200px;
         background-color: #0bc36b;
-      }
-      .example::after {
-        content: 'תלחץ עליי';
-      }
-      .example:hover::after {
-        content: 'תעזוב';
       }
       @keyframes slide {
         from {
