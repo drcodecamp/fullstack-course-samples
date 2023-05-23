@@ -16,8 +16,11 @@
         width: 100%;
         height: 90px;
       }
+      /*  same as: header p, footer p {} */
+
       :is(header, footer) p {
-        color: #2a94f3;
+        color: #017bea;
+        font-weight: bolder;
         cursor: pointer;
       }
       /*  same as: header p, footer p {} */
@@ -25,7 +28,7 @@
   </head>
   <body>
     <header>
-      This is the header content.
+      <div>This is the main content inside a div.</div>
       <p>this is a p inside the header</p>
     </header>
     <main>
