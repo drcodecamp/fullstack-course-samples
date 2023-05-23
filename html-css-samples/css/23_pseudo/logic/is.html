@@ -16,12 +16,11 @@
         width: 100%;
         height: 90px;
       }
-      footer div {
-      }
-      :is(header, main, footer) p:hover {
+      :is(header, footer) p {
         color: #2a94f3;
         cursor: pointer;
       }
+      /*  same as: header p, footer p {} */
     </style>
   </head>
   <body>
@@ -31,6 +30,7 @@
     </header>
     <main>
       <div>This is the main content inside a div.</div>
+      <p>this is a p inside main</p>
     </main>
     <footer>
       <div>This is a div inside footer</div>

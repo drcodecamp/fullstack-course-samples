@@ -4,37 +4,32 @@
     <meta charset="UTF-8" />
     <title>Pseudo :not()</title>
     <style>
-      .other-list {
-        color: blue;
+      html {
+        font-size: 2em;
       }
-      .other-list .animal:not(.cat, .rabbit) {
-        color: red;
-      }
-
       .animal-list .animal:not(.cat, .rabbit) {
-        color: tomato;
+        color: #0037ff;
+        font-weight: bolder;
+        background-color: #cdcdd9;
       }
       .animal-list {
-        color: #5b881c;
+        color: #141414;
       }
     </style>
   </head>
   <body>
-    <div class="other-list">
-      <div class="animal dog">Dog</div>
-      <div class="animal dog">Dog</div>
-      <div class="animal cat">Cat</div>
-      <div class="animal rabbit">Rabbit</div>
-    </div>
-    <div>-------------------List 1 ends-----------------------</div>
     <div class="animal-list">
       <div class="animal dog">Dog</div>
       <div class="animal dog">Dog</div>
-      <div class="animal cat">Cat</div>
-      <div class="animal dog">Dog</div>
-      <div class="animal dog">Dog</div>
-      <div class="animal cat">Cat</div>
+      <div class="animal cat">Cat 🐱</div>
+      <div class="animal cat">Cat 🐱</div>
+      <div class="animal dog">Dog 🐶</div>
+      <div class="animal turtle">Turtle 🐢</div>
+      <div class="animal dog">Dog 🐶</div>
+      <div class="animal dog">Dog 🐶</div>
+      <div class="animal rabbit">Rabbit 🐰</div>
+      <div class="animal rabbit">Rabbit 🐰</div>
+      <div class="animal turtle">Turtle 🐢</div>
     </div>
-    <div>-------------------List 2 ends-----------------------</div>
   </body>
 </html>

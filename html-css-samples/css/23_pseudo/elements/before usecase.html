@@ -14,10 +14,9 @@
       .example::before {
         position: absolute;
         content: '';
-        height: 10px;
+        height: 7px;
         width: 145px;
-        border-radius: 132px;
-        background-color: #bbf1d3;
+        background-color: #d9f009;
         top: 0;
         left: 0;
         display: none;
@@ -27,7 +26,7 @@
         background-color: #00b566;
       }
       .example:hover::before {
-        animation: slide 1s infinite;
+        animation: slide 0.5s linear infinite;
         display: block;
       }
       .example {
@@ -41,7 +40,12 @@
         width: 200px;
         background-color: #0bc36b;
       }
-
+      .example::after {
+        content: 'תלחץ עליי';
+      }
+      .example:hover::after {
+        content: 'תעזוב';
+      }
       @keyframes slide {
         from {
           transform: translateX(-150px);
@@ -53,6 +57,6 @@
     </style>
   </head>
   <body>
-    <div class="example">Hover Here</div>
+    <div class="example">!</div>
   </body>
 </html>

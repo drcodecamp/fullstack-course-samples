@@ -4,55 +4,73 @@
     <meta charset="UTF-8" />
     <title>CSS Variables</title>
     <style>
+      :root {
+        --primary: rgba(255, 165, 0, 0.92);
+        --secondary: rgba(0, 98, 255, 0.92);
+        --main-color: #3b3b3b;
+        --bg-color: #e3e3e3;
+        --title-font-size: 45px;
+      }
       body {
+        font-family: Consolas, sans-serif;
         box-sizing: border-box;
         margin: 0;
-        background: var(--main-bg);
         justify-content: center;
+        color: var(--main-color);
+        background-color: var(--bg-color);
       }
-      :root {
-        --primary: orange;
-        --secondary: green;
-        --main-bg: #2c2c2c;
-        --border-color: #8f8f8f;
-        --card-bg: #414141;
-        --header-size: 70px;
-      }
-      .container {
+      header {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-content: center;
-        background: var(--card-bg);
-        border: 2px solid var(--border-color);
-        height: 750px;
-        width: 1024px;
-        margin-inline: auto;
+        align-items: center;
+        font-size: 3em;
       }
-      .title {
+      span {
         color: var(--primary);
       }
-      .primary {
-        color: var(--primary);
+      main {
+        margin: 0 auto;
+        max-width: 1024px;
       }
-      .secondary {
+      h2 {
         color: var(--secondary);
       }
-      .header {
-        height: var(--header-size);
+      .simple-text {
+        color: var(--secondary);
+      }
+      .simple-bg {
         background-color: var(--secondary);
+      }
+      input {
+        width: 350px;
+        height: 70px;
+        outline: none;
+        border: none;
+        background-color: inherit;
+      }
+      input::placeholder {
+        text-indent: 10px;
+        color: var(--secondary);
+      }
+      .border {
+        padding: 1em;
+        border: var(--primary) 2px solid;
       }
     </style>
   </head>
   <body>
-    <div class="header">Header</div>
-    <div class="container">
-      <div class="title primary">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti iusto sequi ut!
+    <header>This Company called: <span>Doctor Code!</span></header>
+    <main>
+      <h1>This heading also has <span>Doctor Code Span!</span></h1>
+      <h2>This H2 Title is using the --secondary variable as font color.</h2>
+      <div>
+        <p class="simple-text">The color of this text is using special var(--secondary)</p>
+        <p class="simple-bg">The background color of this element using: var(--secondary).</p>
+        <label>
+          <input type="password" placeholder="placeholder color var(--secondary)" />
+        </label>
+        <p class="border">So what? this element using a Border color that use var(--primary).</p>
       </div>
-      <div class="title secondary">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti iusto sequi ut!
-      </div>
-    </div>
+    </main>
   </body>
 </html>
