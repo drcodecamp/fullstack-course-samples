@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      :root,
+      :root[data-force-color-mode='light'] {
+        color-scheme: light dark;
+        --primary: #b81577;
+        --secondary: #7b00ff;
+        --body-background-color: #f0f0f0;
+        --header-background-color: #f5f5f5;
+        --p-text-color: white;
+        --toggle-background-color: darkgray;
+        --dark-mode-sign: '💡';
+      }
+      :root[data-force-color-mode='dark'] {
+        --primary: #78cdb6;
+        --secondary: #7b00ff;
+        --body-background-color: #121212;
+        --header-background-color: #1f1f1f;
+        --p-text-color: white;
+        --toggle-background-color: darkgray;
+        --dark-mode-sign: '🕶';
+      }
+      body {
+        margin: 0 auto;
+        background-color: var(--body-background-color);
+      }
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+      .logo {
+        font-size: 2em;
+        color: var(--primary);
+        font-family: Square, Consolas, sans-serif;
+        text-decoration: none;
+      }
+      header {
+        display: flex;
+        padding: 1.5em;
+        align-items: center;
+        justify-content: space-between;
+        height: 1em;
+        background-color: var(--header-background-color);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.16);
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--toggle-background-color);
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: '';
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      input:checked + .slider {
+        background-color: var(--primary);
+      }
+      input:focus + .slider {
+        box-shadow: 0 0 1px var(--primary);
+      }
+      input:checked + .slider:before {
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .round::before {
+        content: var(--dark-mode-sign);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Doctor Code</div>
+      <div>
+        <label class="switch">
+          <input type="checkbox" onclick="toggleThemeMode()" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+    <script>
+      let isDarkMode = false
+      const toggleThemeMode = () => {
+        document.documentElement.setAttribute(
+          'data-force-color-mode',
+          isDarkMode ? 'light' : 'dark'
+        )
+        isDarkMode = !isDarkMode
+      }
+    </script>
+  </body>
+</html>
