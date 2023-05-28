@@ -7,23 +7,25 @@
     <!--    <link rel="stylesheet" href="foo.css" />
     <link rel="stylesheet" href="doo.css" media="(max-width: 1024px)" />-->
     <style>
-      body {
-        margin: 0;
-      }
       .container {
-        margin: 0 auto;
+        margin-top: 10px;
         width: 500px;
         height: 500px;
         background-color: greenyellow;
       }
       @media (500px <= width <= 800px) {
         .container {
+          width: 100%;
           background-color: red;
+        }
+        .mobile {
+          display: none;
         }
       }
     </style>
   </head>
   <body>
     <div class="container"></div>
+    <div class="container mobile"></div>
   </body>
 </html>
