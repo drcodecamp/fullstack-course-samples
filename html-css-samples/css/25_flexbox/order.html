@@ -3,29 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <title>Flexbox- Order items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+      body {
+        background-color: #232323;
+        font-size: 1.5em;
+        color: white;
+      }
       .flex-container {
         display: flex;
       }
       .flex-container div {
-        color: white;
-        font-size: 22px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: green;
         margin: 5px;
         width: 100px;
         height: 100px;
+        background-color: rgba(51, 51, 51, 0.85);
       }
     </style>
   </head>
   <body>
     <div class="flex-container">
-      <div style="order: 3">1</div>
-      <div style="order: 2">2</div>
-      <div style="order: 4">3</div>
-      <div style="order: 1">4</div>
+      <div style="order: 1">1🍏</div>
+      <div style="order: 2">2🍉</div>
+      <div style="order: 7">3🍌</div>
+      <div style="order: 4">4🥑</div>
+      <div style="order: 5">5🍄</div>
+      <div style="order: 6">6🧅</div>
+      <div style="order: 3">7🥕</div>
     </div>
   </body>
 </html>

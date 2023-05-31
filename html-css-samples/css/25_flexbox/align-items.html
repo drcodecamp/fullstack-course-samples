@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>Flexbox- align items</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
         font-family: monospace;
         box-sizing: border-box;
         margin: 0;
         background-color: #222025;
+        color: white;
+        font-size: 2em;
       }
       .row div:nth-child(1) {
         background-color: #00b566;
@@ -30,17 +33,14 @@
         background-color: #e0305f;
       }
       .row div {
-        color: white;
-        font-size: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 20px;
         width: 100px;
         height: 100px;
         padding: 20px;
         margin: 10px;
-        background-color: #00b566;
+        border-radius: 20px;
       }
       .row {
         height: 400px;
@@ -56,11 +56,11 @@
   </head>
   <body>
     <main>
-      <div class="row" style="align-items: baseline">
+      <div class="row" style="align-items: flex-start">
         <div>1</div>
         <div style="align-self: center">2</div>
         <div>3</div>
-        <div style="align-self: flex-end">4</div>
+        <div>4</div>
       </div>
     </main>
   </body>
