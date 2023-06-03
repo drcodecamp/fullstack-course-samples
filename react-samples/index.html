@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      html {
+        font-size: 2em;
+      }
+      #root {
+        top: 100px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">What background color do i have?</div>
+    <button onclick="toggleGold()">Toggle Class</button>
+    <button onclick="moveText()">Move Right</button>
+    <script>
+      let pos = 100;
+      function toggleGold() {
+        document.querySelector("#root").classList.toggle("gold");
+      }
+      function moveText() {
+        pos += 100;
+        document.querySelector("#root").style.left = `${pos}px`;
+      }
+    </script>
+  </body>
+</html>

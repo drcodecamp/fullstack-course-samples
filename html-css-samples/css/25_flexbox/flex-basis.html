@@ -13,6 +13,7 @@
       }
       .flex-container {
         display: flex;
+        flex-direction: row;
       }
       .flex-container div {
         color: white;
@@ -25,12 +26,21 @@
         width: 100px;
         height: 100px;
       }
+      @media (width <= 700px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="flex-container">
-      <div style="flex-basis: 500px; background-color: green">A</div>
-      <div style="flex-basis: 500px; background-color: green">B</div>
+      <div style="width: 250px; background-color: green">A</div>
+      <div style="width: 250px; background-color: green">B</div>
+    </div>
+    <div class="flex-container">
+      <div style="flex-basis: 250px; background-color: #1a90e4">A</div>
+      <div style="flex-basis: 250px; background-color: #1a90e4">B</div>
     </div>
   </body>
 </html>
