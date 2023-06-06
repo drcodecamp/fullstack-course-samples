@@ -92,17 +92,6 @@
         element.innerHTML = newState;
       }
 
-      function createState(initialState, callback) {
-        return new Proxy(initialState, {
-          set(target, key, value) {
-            // place for pointer checking maybe?
-            target[key] = value;
-            callback();
-            return true;
-          },
-        });
-      }
-
       function renderTodos() {
         const todos = state.todos;
         const todoList = todos
@@ -121,18 +110,18 @@
         if (todo !== "") {
           state.todos.push(todo);
           input.value = "";
-          renderTodos(); // manually update the ui
+          renderTodos(); // todo manually update the ui...BAD.
         }
       }
 
       function removeTodo(idx) {
         state.todos.splice(idx, 1);
-        renderTodos(); // manually update the ui
+        renderTodos(); //  todo manually update the ui...BAD.
       }
 
       // initial state =>
       state.todos[0] = "Learn JavaScript";
-      renderTodos(); // manually update the ui
+      renderTodos(); // todo manually update the ui...BAD.
     </script>
   </body>
 </html>
