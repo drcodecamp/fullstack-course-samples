@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #232323;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+      .grid-container {
+        background-color: #232323;
+        display: grid;
+        grid-template: repeat(2, 100px) / 100px minmax(100px, 4fr) 1fr;
+        grid-auto-rows: 100px;
+        border: 7px solid #a91bdd;
+        border-radius: 5px;
+        width: 100%;
+        grid-gap: 1em;
+      }
+      .grid-item {
+        font-size: 2em;
+        display: flex;
+        place-items: center;
+        place-content: center;
+        box-shadow: inset 0 0 0 1px #232323;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="grid-container">
+        <div class="grid-item">🍄</div>
+        <div class="grid-item">🍏</div>
+        <div class="grid-item">🍉</div>
+      </div>
+    </main>
+  </body>
+</html>

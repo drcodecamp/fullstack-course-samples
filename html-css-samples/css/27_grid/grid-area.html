@@ -5,69 +5,64 @@
     <title>Title</title>
     <style>
       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
         margin: 0;
+        color: #000000;
+        font-size: 1.5em;
+        font-family: Consolas, sans-serif;
+        background-color: #232323;
       }
       .grid-container {
-        gap: 4px;
+        border-radius: 5px;
+        grid-gap: 5px;
+        border: 6px solid #dfdfdf;
+        height: 1024px;
+        width: 1024px;
         display: grid;
         grid-template-rows: 70px 1fr 1fr 1fr 70px;
+        grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
-          'header header header header'
-          'aside aside aside aside'
-          'main main main main'
+          'header  header  header  header'
+          'main    main    main    main'
+          'nav     nav     aside   aside'
           'section section section section'
-          'footer footer footer footer';
-        height: 100vh;
+          'footer  footer  footer  footer';
       }
       header {
         grid-area: header;
-        background-color: #212121;
+        background-color: #317772;
       }
       main {
         grid-area: main;
-        background-color: #ff80b3;
+        background-color: #31773f;
       }
       aside {
         grid-area: aside;
-        background-color: #84ff00;
+        background-color: #497731;
       }
       footer {
         grid-area: footer;
-        background-color: #009dff;
+        background-color: #317677;
       }
       nav {
-        display: none;
         grid-area: nav;
-        background-color: #ffd500;
+        background-color: #314077;
       }
       section {
         grid-area: section;
-        background-color: #ff0000;
-      }
-      @media (min-width: 1024px) {
-        nav {
-          display: block;
-        }
-        .grid-container {
-          gap: 4px;
-          display: grid;
-          grid-template-rows: 70px 1fr 1fr 1fr 70px;
-          grid-template-areas:
-            'header header header header'
-            'aside aside aside aside'
-            'nav nav main main'
-            'section section section section'
-            'footer footer footer footer';
-        }
+        background-color: #633177;
       }
     </style>
   </head>
   <body>
     <div class="grid-container">
       <header>header</header>
-      <aside>aside</aside>
-      <nav>nav</nav>
       <main>main</main>
+      <nav>nav</nav>
+      <aside>aside</aside>
       <section>section</section>
       <footer>footer</footer>
     </div>

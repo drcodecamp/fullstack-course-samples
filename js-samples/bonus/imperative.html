@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>imperative</title>
+    <style>
+      html {
+        font-size: 1.5em;
+        font-family: Consolas, sans-serif;
+        background-color: #232323;
+        color: white;
+      }
+      body {
+        margin: 0;
+      }
+      .add-button {
+        all: unset;
+        border-radius: 20px;
+        padding: 1em;
+        background-color: #302f2f;
+        margin-top: 100px;
+      }
+      .add-button:hover {
+        cursor: pointer;
+        background-color: #1ec77b;
+      }
+      input {
+        all: unset;
+        border-radius: 1em;
+        padding: 1em;
+        background-color: #302f2f;
+        margin-top: 100px;
+        cursor: pointer;
+      }
+      input:focus {
+        box-shadow: -3px 5px 8px #14141470;
+      }
+      main {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 700px;
+      }
+      ul {
+        width: 100%;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em;
+        height: 45px;
+        border-radius: 1em;
+        background-color: #302f2f;
+        margin: 1em 0;
+        list-style: none;
+      }
+      li button {
+        color: white;
+        background-color: #1b1a1a;
+        border-radius: 1em;
+        border: none;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+      li button:hover {
+        background-color: #692727;
+      }
+      #todoList {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <label>
+        <input id="todoInput" placeholder="what need to be done?" />
+        <button class="add-button" onclick="addTodo()">Add</button>
+      </label>
+      <div id="todoList"></div>
+    </main>
+
+    <script>
+      let state = {
+        todos: [],
+      };
+
+      function updateElement(elementId, newState) {
+        const element = document.getElementById(elementId);
+        element.innerHTML = newState;
+      }
+
+      function createState(initialState, callback) {
+        return new Proxy(initialState, {
+          set(target, key, value) {
+            // place for pointer checking maybe?
+            target[key] = value;
+            callback();
+            return true;
+          },
+        });
+      }
+
+      function renderTodos() {
+        const todos = state.todos;
+        const todoList = todos
+          .map((todo, idx) => generateTodoItem(todo, idx))
+          .join("");
+        updateElement("todoList", `<ul>${todoList}</ul>`);
+      }
+
+      const generateTodoItem = (todo, idx) => {
+        return `<li>${todo}<button onclick="removeTodo(${idx})">✖</button></li>`;
+      };
+
+      function addTodo() {
+        const input = document.getElementById("todoInput");
+        const todo = input.value.trim();
+        if (todo !== "") {
+          state.todos.push(todo);
+          input.value = "";
+          renderTodos(); // manually update the ui
+        }
+      }
+
+      function removeTodo(idx) {
+        state.todos.splice(idx, 1);
+        renderTodos(); // manually update the ui
+      }
+
+      // initial state =>
+      state.todos[0] = "Learn JavaScript";
+      renderTodos(); // manually update the ui
+    </script>
+  </body>
+</html>
