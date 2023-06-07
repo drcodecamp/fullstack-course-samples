@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      body {
+        display: flex;
+        background-color: #1b1d21;
+        font-family: monospace;
+        margin: 0 auto;
+        font-size: 4em;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      #grid {
+        margin-top: 50px;
+        width: 1024px;
+        height: 1024px;
+        display: grid;
+        place-items: center center;
+        border: 5px solid tomato;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+      }
+      #grid div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>🍏</div>
+      <div>🍉</div>
+      <div>🍌</div>
+      <div>🥑</div>
+      <div>🍄</div>
+      <div>🧅</div>
+      <div>🥕</div>
+    </div>
+  </body>
+</html>
